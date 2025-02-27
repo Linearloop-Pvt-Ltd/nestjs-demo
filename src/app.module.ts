@@ -4,11 +4,20 @@ import { AppService } from './app.service';
 import { JokesModule } from './jokes/jokes.module';
 import { UsersModule } from './users/users.module';
 import { CountersModule } from './counters/counters.module';
-import { CounterService } from './counters/counters.service';
+import { PrometheusModule } from '@willsoto/nestjs-prometheus';
 
 @Module({
-  imports: [JokesModule, UsersModule, CountersModule],
+  imports: [
+    PrometheusModule.register({
+      defaultMetrics: {
+        enabled: true,
+      },
+    }),
+    CountersModule,
+    JokesModule,
+    UsersModule,
+  ],
   controllers: [AppController],
-  providers: [AppService, CounterService],
+  providers: [AppService],
 })
 export class AppModule {}

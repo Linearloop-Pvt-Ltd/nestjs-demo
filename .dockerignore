@@ -1,0 +1,10 @@
+npm-debug.log
+dist
+.git
+.gitignore
+.env
+*.md
+docker-compose*  # not needed for docker build
+grafana-data/
+prometheus-data/
+grafana/
