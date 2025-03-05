@@ -225,6 +225,22 @@ scrape_configs:
     static_configs:
       - targets: ['nginx-exporter:9113']
 ```
+# Grafana Configuration Files
+
+## Dashboard Configuration
+The `dashboard.yml` file is used to define the dashboards that Grafana will load. It specifies the location of the dashboard files and other settings. In our setup, it is configured to load dashboards from the `/var/lib/grafana/dashboards` directory.
+
+## Datasource Configuration
+The `datasource.yml` file is used to configure the data sources that Grafana will use to fetch data. In this case, we are setting up Prometheus as the data source, which allows Grafana to query metrics from our Prometheus server.
+
+
+## Dashboard Configuration
+The `Test-1-1741150482552.json` file is used to define a specific dashboard in Grafana. It contains the layout, panels, and data sources for visualizing metrics.
+
+
+
+
+
 
 ### Application level Configuration for monitoring | Example Prometheus Configuration in NestJS
 
